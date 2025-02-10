@@ -2,6 +2,7 @@ export class HttpClient {
   constructor() {
     this._url = 'https://issuesdb-1f78.restdb.io/rest/';
   }
+
   async get(endpoint) {
     try {
       const response = await fetch(this._url + endpoint, {
@@ -10,6 +11,7 @@ export class HttpClient {
           'Content-Type': 'application/json',
         },
       });
+
       if (response.ok) {
         return await response.json();
       } else {
@@ -27,14 +29,14 @@ export class HttpClient {
       const response = await fetch(this._url + endpoint, {
         method: 'POST',
         headers: {
-          'x-apikey': '67a9efe8020c067a95e653bc',
+          'x-apikey': '67a9efe4020c067b55e653b8',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
 
       if (response.ok) {
-        return await response.json();
+        return response.json();
       } else {
         throw new Error(
           `Felkod: ${response.status} Felmeddelande: ${response.statusText}`
