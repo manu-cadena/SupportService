@@ -3,7 +3,7 @@ export class User {
     this.email = email;
     this.caption = caption;
     this.description = description;
-    this.issueDate = new Date().toLocaleDateString('sv-SE');
+    this.issueDate = new Date().toLocaleString('sv-SE');
     this.issueNumber = crypto.randomUUID().replaceAll('-', '');
   }
 }

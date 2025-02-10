@@ -29,7 +29,7 @@ export class HttpClient {
       const response = await fetch(this._url + endpoint, {
         method: 'POST',
         headers: {
-          'x-apikey': '67a9efe4020c067b55e653b8',
+          'x-apikey': '67a9efe8020c067a95e653bc',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
