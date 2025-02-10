@@ -2,6 +2,8 @@ import { User } from './user.js';
 
 const form = document.querySelector('form');
 
+const issues = [];
+
 const initApp = () => {};
 
 const handleSubmit = (e) => {
@@ -14,7 +16,9 @@ const handleSubmit = (e) => {
 
   const user = new User(email, caption, description);
 
-  console.log(user);
+  issues.push(user);
+
+  console.log(issues);
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
